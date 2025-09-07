@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login-Library Management System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <!--Unicons CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div>
+      <h2>Registered Librarians</h2>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!--Search bar-->
+    <div class="search-container">
+      <form method="get" action="{% url 'librarian_list' %}">
+        <label for="search">Search by Firstname:</label>
+        <br />
+        <input
+          type="text"
+          name="search"
+          placeholder="Search for names.."
+          value="{{query}}"
+        />
+        <button type="submit">Search</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="result-container">
+        {% if result %}
+        <h3>Results found for "{{query}}":</h3>
+        <ul>
+          <li><strong>ID:</strong> {{ result.id }}</li>
+          <li><strong>Firstname:</strong> {{ result.firstname }}</li>
+          <li><strong>Surname:</strong> {{ result.surname }}</li>
+          <li><strong>Email:</strong> {{ result.email }}</li>
+          <li><strong>Password:</strong> {{ result.password }}</li>
+        </ul>
+        {% else %}
+        <h3>No resutls found for "{{ query }}".</h3>
+        {% endif %}
+      </form>
+    </div>
+    <!--Search bar icons using Iconsnout Website-->
+    <span class="search-bar-icons">
+      <i class="uil uil-search search-icon"></i>
+      <i class="uil uil-times"></i>
+    </span>
+  </body>
+</html>

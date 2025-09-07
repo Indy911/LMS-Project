@@ -1,0 +1,139 @@
+h1 {
+    color: red;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: none;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: red;
+    font-size: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: red;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('Bookshelves.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+div {
+    text-align: center;
+    margin: auto;
+}
+
+.edu-nsw-act-cursive {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.big-button {
+    border-radius: 10px;
+    border-color: red;
+    background-color: grey;
+    color: red;
+    size: 60px;
+    font-size: 45px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin: 20px;
+}
+
+.button-container-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.button-container-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    width: 600px;
+    margin: auto;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 10vw;
+    width: 50%;
+    border-radius: 15px;
+}
+
+form input {
+    border: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    outline: none;
+    width: 400px;
+}
+
+.small-button {
+    border-radius: 25px;
+    border-color: red;
+    background-color: grey;
+    color: red;
+    size: 30px;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin: 20px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 60px;
+    width: 50%;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
