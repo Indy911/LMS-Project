@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here
 
 class Librarian(models.Model):
-    Name = models.CharField(max_length=250)
-    Username = models.CharField(max_length=250)
-    Email = models.EmailField(unique=True)
-    Password = models.CharField(max_length=128)
+    name = models.CharField(max_length=250)
+    username = models.CharField(max_length=250)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=128)
 
     class Meta:
         db_table = "librarians"
@@ -25,7 +25,7 @@ class Member(models.Model):
 class Book(models.Model):
     Title = models.CharField(max_length=250)
     Author = models.CharField(max_length=250)
-    ISBN = models.CharField(max_lebgth=13, unique=True)
+    ISBN = models.CharField(max_length=13, unique=True)
     Price = models.DecimalField(max_digits=4, decimal_places=2)
     Is_borrowed = models.BooleanField(default=False)
 

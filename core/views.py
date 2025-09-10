@@ -1,6 +1,6 @@
-from django.views import View
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.views import View # Imports the view class
+from django.http import HttpResponse #Imports the class for handling HTTP responses
+from django.shortcuts import render, redirect #Imports render and redirect functions
 from .forms import LibrarianForm
 from .models import Librarian
 

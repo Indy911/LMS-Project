@@ -1,5 +1,5 @@
-from django.urls import path
-from . import views
+from django.urls import path #Imports the path function to define URL patterns
+from . import views #Imports views from the current app
 
 urlpatterns = [
     path('', views.home, name='home'),
