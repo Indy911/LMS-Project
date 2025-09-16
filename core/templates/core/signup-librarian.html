@@ -25,7 +25,7 @@
     <div class="form-container">
       <h3>Enter your details</h3>
       <form method="POST" action="/signup-librarian/">
-        {% csrf_token %} {{ form }}
+        {% csrf_token %} {{ form.as_p }}
         <button type="submit" class="small-button">Sign Up</button>
       </form>
     </div>

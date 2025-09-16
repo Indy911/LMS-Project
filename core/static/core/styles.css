@@ -87,9 +87,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 750px;
+    height: 650px;
     width: 600px;
-    margin: auto;
     background-color: grey;
     border-radius: 25px;
 }
@@ -97,10 +96,7 @@ a {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5vw 10vw;
-    width: 50%;
+    width: 70%;
     border-radius: 15px;
 }
 
@@ -108,7 +104,6 @@ form input {
     border: 5px;
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
     font-size: 14px;
     background-color: white;
     color: black;
@@ -148,3 +143,4 @@ form input {
     align-items: center;
     padding: 10px;
 }
+
