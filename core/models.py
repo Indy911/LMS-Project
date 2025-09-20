@@ -3,61 +3,25 @@ from django.db import models
 # Create your models here
 
 class Librarian(models.Model):
-    name = models.CharField(max_length=250)
-    username = models.CharField(max_length=250)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=128)
+    staffID = models.AutoField(primary_key=True) # Unique identifier for each librarian. Auto-incremented.
+    name = models.CharField(max_length=250) # Full name of the librarian. Max length 250 characters.
+    username = models.CharField(max_length=250, unique=True) # Username for librarian login. Max length 250 characters. Must be unique.
+    email = models.EmailField(unique=True) # Email address of the librarian. Must be unique.
+    password = models.CharField(max_length=128, unique=True) # Password for librarian login. Max length 128 characters. Must be unique.
 
     class Meta:
-        db_table = "librarians"
+        db_table = "librarians" # Specifies the database table name for this model.
+
+class Library_Member(models.Model):
+    memberID = models.AutoField(primary_key=True) # Unique identifier for each library member. Auto-incremented.
+    name = models.CharField(max_length=250) # Full name of the librarian. Max length 250 characters.
+    username = models.CharField(max_length=250, unique=True) # Username for librarian login. Max length 250 characters. Must be unique.
+    DOB = models.DateField() # Date of Birth of the library member.
+    address = models.CharField(max_length=500) # Address of the library member. Max length 500 characters.
+    phone = models.IntegerField(max_length=15, unique=True) # Phone number of the library member. Max length 15 digits. Must be unique.
+    email = models.EmailField(unique=True) # Email address of the librarian. Must be unique.
+    password = models.CharField(max_length=128, unique=True) # Password for librarian login. Max length 128 characters. Must be unique.
+
+    class Meta:
+        db_table = "library members" # Specifies the database table name for this model.
         
-class Member(models.Model):
-    Name = models.CharField(max_length=250)
-    Username = models.CharField(max_length=250)
-    DOB = models.DateField()
-    Email = models.EmailField(unique=True)
-    HouseAddress = models.CharField(max_length=500)
-    Password = models.CharField(max_length=128)
-
-    class Meta:
-        db_table = "library_members"
-
-class Book(models.Model):
-    Title = models.CharField(max_length=250)
-    Author = models.CharField(max_length=250)
-    ISBN = models.CharField(max_length=13, unique=True)
-    Price = models.DecimalField(max_digits=4, decimal_places=2)
-    Is_borrowed = models.BooleanField(default=False)
-
-    class Meta:
-        db_table = "books"
-
-class Loan(models.Model):
-    IssueDate = models.DateField(auto_now_add=True)
-    DueDate = models.DateField()
-    ReturnDate = models.DateField(null=True, blank=True)
-    Fine = models.DecimalField(max_digits=4, decimal_places=2, default=0.00)
-
-    class Meta:
-        db_table = "loans"
-
-class Genre(models.Model):
-    Genre = models.CharField(max_length=100)
-    Description = models.TextField()
-
-    class Meta:
-        db_table = "genres"
-
-class Reservation(models.Model):
-    ReservationDate = models.DateField(auto_now_add=True)
-    Status = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = "reservations"
-
-class Report(models.Model):
-    Action = models.TextField()
-    Date = models.DateField(auto_now_add=True)
-
-    class Meta:
-        db_table = "reports"
